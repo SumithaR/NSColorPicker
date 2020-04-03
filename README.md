@@ -18,8 +18,7 @@ private _colorPicker: ColorPicker;
 this._colorPicker = new ColorPicker();
 this._colorPicker.show()
         .then(result => {
-          
-        })
+       })
         .catch(err => {
         });
 Apache License Version 2.0, January 2004
