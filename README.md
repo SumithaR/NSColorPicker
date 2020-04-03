@@ -15,7 +15,9 @@ tns plugin add nativescript-color-picker
 import { ColorPicker } from 'nativescript-color-picker';
 
 private _colorPicker: ColorPicker;
+
 this._colorPicker = new ColorPicker();
+
 this._colorPicker.show()
         .then(result => {
        })
