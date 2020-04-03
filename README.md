@@ -2,6 +2,9 @@
 
 Nativescript plugin to show color picker.
 
+# ScreenShots 
+
+
 ## Installation
 
 tns plugin add nativescript-color-picker
