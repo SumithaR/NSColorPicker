@@ -1,40 +1,29 @@
 # nativescript-color-picker
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
+Nativescript plugin to show color picker.
 
-Then describe what's the purpose of your plugin. 
-
-In case you develop UI plugin, this is where you can add some screenshots.
-
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
+# ScreenShots 
+![android](https://user-images.githubusercontent.com/62943678/78359944-9f563e00-75d3-11ea-8042-229e347ad84f.png)
+![ios](https://user-images.githubusercontent.com/62943678/78359952-a41af200-75d3-11ea-9b80-7177a7ba139d.png)
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
-
-```javascript
 tns plugin add nativescript-color-picker
-```
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
+import { ColorPicker } from 'nativescript-color-picker';
 
-## API
+private _colorPicker: ColorPicker;
 
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
-    
-## License
+this._colorPicker = new ColorPicker();
 
-Apache License Version 2.0, January 2004
+this._colorPicker.show()
+        .then(result => {
+       })
+        .catch(err => {
+        });
+        
+        
+        
+       
