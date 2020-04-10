@@ -47,11 +47,17 @@ export class ColorPicker {
           .extend(
             {
               colorViewControllerDidChangeColor(colorViewCntroller, color) {
+                
                 const components = CGColorGetComponents(color.CGColor);
                 const red = lroundf(components[0] * 255);
                 const green = lroundf(components[1] * 255);
                 const blue = lroundf(components[2] * 255);
                 const alpha = lroundf(components[3] * 255);
+
+                resolve(new Color(alpha, red, green, blue));
+               
+                /*
+                
                 switch (colorMode) {
                   case 'ARGB':
                     ColorPicker.COLOR = new Color(alpha, red, green, blue).argb;
@@ -68,7 +74,7 @@ export class ColorPicker {
                     ColorPicker.COLOR = undefined;
                     resolve('Not supported on iOS');
                     break;
-                }
+                }*/
               },
               rgb2hex(rgb: string) {
                 const match = rgb.match(
@@ -80,7 +86,7 @@ export class ColorPicker {
                       ('0' + parseInt(match[2], 10).toString(16)).slice(-2) +
                       ('0' + parseInt(match[3], 10).toString(16)).slice(-2)
                   : '';
-              }
+              } 
             },
             {
               protocols: [MSColorSelectionViewControllerDelegate]

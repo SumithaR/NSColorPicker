@@ -7,6 +7,7 @@ import { ColorPicker } from 'nativescript-color-picker';
 })
 export class HomeComponent implements OnInit {
     private _colorPicker: ColorPicker;
+    color:any = "white";
 
     constructor() {
         // Use the component constructor to inject providers.
@@ -26,7 +27,8 @@ export class HomeComponent implements OnInit {
         this._colorPicker
         .show()
         .then(result => {
-          console.log("result", result )
+          console.log("result color", result )
+          this.color = result;
         })
         .catch(err => {
           console.log(err);
